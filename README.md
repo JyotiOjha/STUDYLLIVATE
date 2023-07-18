@@ -6,7 +6,7 @@ Here we are presenting an ALL-IN-ONE platform to access all sorts of study mater
 You can download material for free and even contribute your material.
 
 
-##शिक्षाVerse is your own go-to library accessible anywhere from anywhere.
+## शिक्षाVerse is your own go-to library accessible anywhere from anywhere.
 
 Languages used : 
 1. HTML
