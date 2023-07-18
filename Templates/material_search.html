@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    
+    </style>
+    
+    <h1>Search Results</h1>
+    <ul>
+        {% for material in materials %}
+            <li>{{ material.title }}</li>
+        {% empty %}
+            <li>No results found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    .container {
+        background-color: #70543e;
+        padding : 20px
+    }
+    body{
+        background-image: url('https://images.unsplash.com/photo-1526243741027-444d633d7365?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    </style>
+   
+   <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h1>Material Submission</h1>
+                    <form method="POST" enctype="multipart/form-data" action="{% url 'material_submission_submit' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="title"><b>Title:</b></label>
+                            <input type="text" id="title" name="title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category"><b>Category:</b></label>
+                            <select id="category" name="category" class="form-control" required>
+                                <option value=""><b>Select a category</b></option>
+                                {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="file"><b>File:</b></label>
+                            <input type="file" id="file" name="file" class="form-control-file" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="link"><b>Link:</b></label>
+                            <input type="text" id="link" name="link" class="form-control">
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    {% endblock %}
+    
+   

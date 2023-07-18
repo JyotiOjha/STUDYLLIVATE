@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    .container {
+        background-color: #70543e;
+        padding: 20px;
+    }
+    body{
+        background-image: url('https://images.unsplash.com/photo-1526243741027-444d633d7365?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    </style>
+    
+   
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Search Results</h1>
+   
+                <form method="GET" action="{% url 'material_search' %}">
+                    <label for="query"><b>Search by Title:</b></label>
+                    <input type="text" id="query" name="query" required>
+                    <br>
+                    <label for="category"><b>Search by Category:</b></label>
+                    <select id="category" name="category">
+                        <option value="">All</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <input type="submit" value="Search" class="btn btn-primary">
+                </form>
+
+                {% if materials %}
+                    <ul>
+                        {% for material in materials %}
+                            <li>
+                                {{ material.title }}
+                                {% if material.file %}
+                                    <a href="{{ material.file.url }}">Download</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {% if query %}
+                        <p class="text-center">No results found for '{{ query }}'.</p>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+   
+{% endblock %}
+
+   

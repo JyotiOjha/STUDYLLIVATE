@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    h1 {text-align: center;
+    font-size : 50pt}
+    h4{text-align : center;}
+    body{
+        background :linear-gradient(to right,#000000, #3533cd);
+    }
+    .container {
+        display: flex;
+      }
+      
+      .box {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+        background-color: #0a1a44;
+      }
+      .line-gap
+      {
+        margin-bottom : 25px;
+      }
+     
+      #scrolling-text {
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+    .rounded-image {
+        border-radius: 10%;
+    }
+   
+    </style>
+   
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>शिक्षाVerse</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="line-gap"></div>
+    <h1 class = "line-gap"style="color: #00c4cc;"><b>शिक्षाVerse</b></h1>
+   <img class = "line-gap rounded-image" src="https://www.cbsebookshop.com/wp-content/uploads/JEE-MAIN-PREP-GUIDE-2021.jpg"height = 250px width = 382px>
+   <img class = "line-gap rounded-image" src="https://m.media-amazon.com/images/I/71bdrUygAhL._AC_UF1000,1000_QL80_.jpg"height = 250px width = 370px>
+   <img class = "line-gap rounded-image" src="https://m.media-amazon.com/images/I/515ne2A2yBL._AC_UF1000,1000_QL80_.jpg"height = 250px width = 370px>
+   <img class = "line-gap rounded-image" src="https://m.media-amazon.com/images/I/51+aB6Yo9HL._SL500_.jpg"height = 250px width = 400px>
+   <div class="container">
+    <div class="box text-center" style="color: white;">
+        <h2>SEARCH</h2>
+        <p>Search for any content for any level of study.</p>
+        <p>Everything is available in one place.</p>
+    </div>
+    <div class="box text-center" style="color: white; background-color: #00c4cc;">
+        <h2>LEARN</h2>
+        <p>Download every form of content available in the form of files and links and make your learning nonstop.</p>
+    </div>
+    <div class="box text-center" style="color: white;">
+        <h2>CONTRIBUTE</h2>
+        <p>Contribute relevant and useful content that can help others excel and learn, making learning nonstop for others as well.</p>
+    </div>
+</div>
+<div class="line-gap"></div>
+
+<div id="scrolling-text">
+    <marquee behavior="scroll" direction="left">
+        This is an ALL IN ONE platform where you get to find, learn and contribute to various study materials required.This is your own on tips library available anywhere and anytime for free.
+    </marquee>
+</div>
+    </body>
+    </html>
+
+
+
+{% endblock %}
