@@ -1,1 +1,1 @@
-# STUDYLLIVATE
+# शिक्षाVerse
