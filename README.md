@@ -13,7 +13,6 @@ Languages used :
 2. CSS
 3. JAVASCRIPT
 4. PYTHON
-5. CPP
 
 Frameworks :
 1. Django
