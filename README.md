@@ -19,7 +19,7 @@ Frameworks :
 2. Bootstrap
 
 DATABASE : 
-SQL
+MySQL
 
 Here we present to you a glimpse of शिक्षाVerse.
 
